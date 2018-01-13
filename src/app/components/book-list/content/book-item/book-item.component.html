@@ -1,0 +1,22 @@
+<div class="col-sm-6 col-lg-4" *ngFor="let book of bookServer.books" >
+  <div class="panel panel-default">
+      <div class="panel-body small-padding" id="itembox">
+        <img class="slide-img" [src]="book.url" alt="" id="mianpic" />
+        <dl class="dl-horizontal info-list">
+          <dt>
+            <a href="#">{{book.bookName}}</a>
+          </dt>
+          <dd>{{ book.price | currency :'CNY' :'symbol-narrow' }}</dd>
+        </dl>
+        <p class="info-list">{{book.des}}</p>
+        <div>
+          <img src="/assets/star-open.png"/>
+          <img src="/assets/star-open.png"/>
+          <img src="/assets/star-open.png"/>
+          <img src="/assets/star-open.png"/>
+          <img src="/assets/star-open.png"/>
+          <span>{{book.level}}星</span>
+        </div>
+      </div>
+  </div>
+</div>
